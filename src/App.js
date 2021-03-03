@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from 'react';
+import Users from './Users';
+import Posts from './Posts';
+import { axios } from "axios";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  // const [listOfUSer, setListOfUSer] = useState([]);
+  // const [listOfPosts, setListOfPosts] = useState([]);
+  // const [listOfComments, setListOfComments] = useState([]);
+  // useEffect(() => {
+  //   axios.get(`https://jsonplaceholder.typicode.com/users`)
+  //     .then(res => setListOfUSer(res.data))
+
+  //   axios.get(`https://jsonplaceholder.typicode.com/posts`)
+  //     .then(res => setListOfPosts(res.data));
+
+  //   axios.get(`https://jsonplaceholder.typicode.com/comments`)
+  //     .then(res => setListOfComments(res.data));
+
+  // }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Users/>
+      {/* <Posts/> */}
     </div>
   );
 }
